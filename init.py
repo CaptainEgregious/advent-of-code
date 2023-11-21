@@ -77,7 +77,7 @@ class AdventManager:
                 elif error_count == 0:
                     logger.info("Probable Timeout, retrying")
             except Exception as e:
-                logger.error(f"Unhandled Exception {str(e)}")
+                logger.error(f"Unhandled Exception -  {str(e)}")
                 done = True
         return
 
