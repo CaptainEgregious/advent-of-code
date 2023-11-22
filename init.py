@@ -42,7 +42,7 @@ class AdventManager:
         code.parent.mkdir(parents=True, exist_ok=True)
         with code.open("w", encoding="utf-8") as c:
             c.write(
-                f'# Advent of Code | Year {self.year} | Day {str(day)} \n # Author {AUTHOR}\n\nwith open((__file__.rstrip("code.py")+"input.txt"), \'r\') as input_file:\n    input = input_file.read()\n\n\n\nprint("Part One : "+ str(None))\n\n\n\nprint("Part Two : "+ str(None))'
+                f'# Advent of Code | Year {year} | Day {str(day)} \n # Author {AUTHOR}\n\nwith open((__file__.rstrip("code.py")+"input.txt"), \'r\') as input_file:\n    input = input_file.read()\n\n\n\nprint("Part One : "+ str(None))\n\n\n\nprint("Part Two : "+ str(None))'
             )
         pathlib.Path(str(year), str(day), "test.py").touch()
         return
