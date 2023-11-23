@@ -24,9 +24,9 @@ USER_AGENT = "adventofcode_working_directories_creator"
 
 class AdventManager:
     def __init__(self) -> None:
-        self.year: datetime.date = None
-        self.month: datetime.date = None
-        self.day: datetime.date = None
+        self.year: int
+        self.month: int
+        self.day: int
         self._get_dates()
         pass
 
@@ -113,7 +113,7 @@ class AdventManager:
             self.setup_year()
         return
 
-    def setup_year(self, year: int) -> None:
+    def setup_year(self, year: int = 2022) -> None:
         self._create_directories_and_files(year=year)
         # Implement Getting problem statements if I can be bothered
         return

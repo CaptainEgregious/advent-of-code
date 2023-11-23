@@ -1,4 +1,4 @@
-# Advent of Code | Year 2023 | Day 1
+# Advent of Code | Year 2022 | Day 1
 # Author Robin Taylor
 
 with open((__file__.rstrip("code.py") + "input.txt"), "r") as input_file:
