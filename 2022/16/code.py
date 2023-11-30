@@ -9,3 +9,13 @@ print("Part One : " + str(None))
 
 
 print("Part Two : " + str(None))
+
+
+class Solver:
+    def __init__(self, input):
+        self.input = input
+
+
+if __name__ == "__main__":
+    s = Solver()
+    s.run(input=input)
