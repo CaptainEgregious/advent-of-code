@@ -1,8 +1,15 @@
 # Advent of Code | Year 2023 | Day 7
 # Author Robin Taylor
+from typing import Tuple, NamedTuple
+import collections
 
 with open((__file__.rstrip("code_7.py") + "input.txt"), "r") as input_file:
     input = input_file.read()
+
+
+class Hand(NamedTuple):
+    cards: list
+    bid: int
 
 
 class Solver:
@@ -17,6 +24,7 @@ class Solver:
             "OP": 1,
             "HK": 1,
         }
+        self.cards = ["2", "3", "4", "5", "6", "7", "8", "8", "10", "J", "Q", "K", "A"]
 
     def process_single_hand(self, hand):
         result = [[x] * hand.count(x) for x in set([*hand])]
@@ -36,9 +44,14 @@ class Solver:
         return top_score
 
     def run_one(self):
+        this = sorted((h,b) for h, b)
         total_score = 0
+        # for hand in self.input.split("\n"):
+        #     print()
+        # score = self.process_single_hand(hand.split(" ")[0])
         for hand in self.input.split("\n"):
-            score = self.process_single_hand(hand.split(" ")[0])
+            print(hand)
+            print(hand.split())
 
         return
 
